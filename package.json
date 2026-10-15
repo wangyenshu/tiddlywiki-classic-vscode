@@ -3,7 +3,7 @@
   "displayName": "TiddlyWiki Classic",
   "description": "Syntax highlighting for TiddlyWiki Classic wiki text, with MathJax formulas highlighted as LaTeX.",
   "version": "0.1.0",
-  "publisher": "local",
+  "publisher": "wangyenshu",
   "license": "MIT",
   "engines": {
     "vscode": "^1.75.0"
