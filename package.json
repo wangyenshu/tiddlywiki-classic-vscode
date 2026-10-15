@@ -28,7 +28,7 @@
           "twc"
         ],
         "extensions": [
-          ".twc"
+          ".tid"
         ],
         "configuration": "./language-configuration.json"
       }
