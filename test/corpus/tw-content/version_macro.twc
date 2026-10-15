@@ -1,0 +1,6 @@
+This is a simple macro that outputs the version of TiddlyWiki that is being used.
+{{{
+<<version>>
+}}}
+Displays as:
+<<version>>

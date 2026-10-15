@@ -1,0 +1,10 @@
+In the SiteSubtitle tiddler you can define the subtitle of your ~TiddlyWiki (seen under the main title)
+In ~TiddlySpace by default it is set as
+{{{
+a TiddlySpace
+}}}
+
+You can set it to anything you want, such as:
+{{{
+documentation on the shadow tiddlers
+}}}

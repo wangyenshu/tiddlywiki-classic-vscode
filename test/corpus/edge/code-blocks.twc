@@ -1,0 +1,13 @@
+{{{
+Monospaced block with ''no'' //formatting// and \(no math\)
+}}}
+//{{{
+// Plugin code
+config.macros.example = { handler: function(place) { var re = /a\/b/; } };
+//}}}
+/*{{{*/
+.viewer span.marked { color: #cc0000 !important; background: transparent; }
+/*}}}*/
+<!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::ViewToolbar]]'></div>
+<!--}}}-->

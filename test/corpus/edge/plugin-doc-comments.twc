@@ -1,0 +1,12 @@
+/***
+|''Name:''|ExamplePlugin|
+|''Source:''|http://www.example.com/plugin|
+!!Usage
+* use \(x\) inline
+***/
+//{{{
+config.extensions.Example = { a: "$$", b: "\\(", c: '//', d: "''" };
+//}}}
+/***
+!!End
+***/

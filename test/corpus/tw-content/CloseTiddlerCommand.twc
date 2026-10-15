@@ -1,0 +1,4 @@
+Closes the current tiddler, regardless of whether it is being editted. It is used with the ToolbarMacro like this:
+{{{
+<<toolbar closeTiddler>>
+}}}

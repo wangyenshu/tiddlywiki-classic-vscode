@@ -1,0 +1,7 @@
+To close all open tiddlers:
+{{{
+<<closeAll>>
+}}}
+Displays as:
+
+<<closeAll>>

@@ -1,0 +1,3 @@
+<html>
+<div class="x" onclick="alert('hi')">raw <b>HTML</b></div>
+</html> and <HTML><span>inline</span></HTML>.

@@ -1,0 +1,7 @@
+To create a new tiddler from the current date and time:
+{{{
+<<newJournal>>
+}}}
+Displays as:
+
+<<newJournal>>

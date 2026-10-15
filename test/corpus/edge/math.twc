@@ -1,0 +1,22 @@
+Inline \(a_{ij} + \frac{1}{p}\) and display \[\sum_{n=0}^{\infty} \pi^n\] and dollars $$e=mc^2$$.
+Math with a percent: \(100\% \text{ of } x\) and a comment \[x % comment
++ y\].
+Unbalanced environment \[\begin{aligned} a &= b \] stops at the first closer.
+Multi-line display:
+\[
+\begin{array}{rcl}
+o_{K^{\flat}} & \xrightarrow{\simeq} & \displaystyle\varprojlim_{(\cdot)^q} o_K \\
+\alpha & \longmapsto & (\alpha^{1/q^i})^{\sharp}
+\end{array}
+\tag{1.4.19}
+\]
+Multi-line inline \(x +
+y\) and multi-line dollars $$a
+= b$$.
+Math in italics //for \(x // y\) here// and in a cell below.
+|\(a // b\)|\[c\]|
+Math in a list:
+* \(\mathcal{O}_{\mathcal{E}}\) is a ring
+# $$x$$
+Math next to a link [[\(x\)|Target]] and a macro <<tiddler "\(x\)">>.
+Single dollars $x$ are not math for this plugin.

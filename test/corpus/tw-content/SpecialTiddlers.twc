@@ -1,0 +1,4 @@
+~TiddlyWiki uses several "special tiddlers" to perform a number of essential functions as follows:
+* [[Configuration]] tiddlers configure the layout of the page, including the MainMenu, the SiteTitle, the SiteSubtitle and other features. 
+* A tiddler called DefaultTiddlers is used to list the tiddlers that are shown at startup. 
+* MoreTab, MissingTiddlers, OrphanTiddlers

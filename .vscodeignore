@@ -1,0 +1,11 @@
+test/**
+syntaxes/build-grammar.mjs
+node_modules/**
+.vscode/**
+*.vsix
+package-lock.json
+test-output/**
+examples/**
+.github/**
+.gitignore
+dist/**

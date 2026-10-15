@@ -1,0 +1,87 @@
+!!! 3.2.1 Étale \(\boldsymbol{\varphi}\)-modules over \(\boldsymbol{E}\).
+
+''Definition 3.15.'' //A// \(\varphi\)-module //over \(E\) is an \(E\)-vector space \(M\) together with a map \(\varphi : M \to M\) which is semi-linear with respect to the absolute Frobenius \(\sigma\), i.e.,//
+
+\[\varphi(x+y) = \varphi(x) + \varphi(y), \quad \textit{for all } x,y \in M; \tag{3.12}\]
+\[\varphi(\lambda x) = \sigma(\lambda)\varphi(x) = \lambda^{p}\varphi(x), \quad \textit{for all } \lambda \in E,\ x \in M. \tag{3.13}\]
+
+\(M_\varphi = E \,{}_{\sigma}\!\otimes_{E} M\),
+
+\[
+\begin{array}{rrcl}
+\varPhi : & M_\varphi & \longrightarrow & M \\
+& \lambda \otimes x & \longmapsto & \lambda\varphi(x).
+\end{array}
+\]
+
+''Proposition 3.17.'' //If \(M\) is a \(\varphi\)-module of finite dimension \(d\), then//
+
+\[
+\begin{aligned}
+\varPhi\ \textit{is an isomorphism} &\iff \varPhi\ \textit{is injective} \iff \varPhi\ \textit{is surjective} \\
+&\iff M = E \cdot \varphi(M) \iff A = (a_{ij}) \in \mathrm{GL}_d(E).
+\end{aligned}
+\]
+
+''Definition 3.18.'' //A \(\varphi\)-module \(M\) over \(E\) is called// étale //if \(\varPhi : M_\varphi \to M\) is an isomorphism and if \(\dim_E M\) is finite.//
+
+Let \(\mathscr{M}^{\text{ét}}_{\varphi}(E)\) be the category of étale \(\varphi\)-modules over \(E\) with the morphisms being the \(E\)-linear maps which commute with \(\varphi\).
+
+From §1.2.4, we let \(\mathcal{O}_{\mathcal{E}}\) be the Cohen ring \(\mathcal{C}(E)\) of \(E\) and \(\mathcal{E}\) be the field of fractions of \(\mathcal{O}_{\mathcal{E}}\). Then
+
+\[\mathcal{O}_{\mathcal{E}} = \varprojlim_{n \in \mathbb{N}} \mathcal{O}_{\mathcal{E}}/p^n\mathcal{O}_{\mathcal{E}}\]
+
+and \(\mathcal{O}_{\mathcal{E}}/p\mathcal{O}_{\mathcal{E}} = E\), \(\mathcal{E} = \mathcal{O}_{\mathcal{E}}[\frac{1}{p}]\).
+
+To fix ideas we choose an algebraic closure \(\overline{\mathbb{Q}_p}\) of \(\mathbb{Q}_p\). The absolute value \(|\ |\) on \(\mathbb{C}_p\) will be normalized by \(|\boldsymbol{\pi}| = q^{-1}\). Whenever we refer to a topology on \(\mathbb{C}_p\), it will be the one induced by the metric \(|\ |\).
+
+We consider now any intermediate field \(L \subseteq K \subseteq \mathbb{C}_p\) which is //perfectoid//, i.e., which satisfies:
+
+* \(K\) is complete,
+* the value group \(|K^{\times}|\) is dense in \(\mathbb{R}^{\times}_{>0}\), and
+* \((o_K/po_K)^p = o_K/po_K\).
+
+''Remark 1.4.3'' //Every element of the value group \(|K^{\times}|\) is a pth power.//
+
+//Proof// Let \(a \in K^{\times}\). There is a \(\varpi \in K^{\times}\) such that \(|p| < |\varpi| < 1\) and \(|\varpi^{m+1}| < |a| \leq |\varpi^{m}|\). It follows that \(|a| = |b^{p}| = |b|^{p}\). @@display:block;text-align:right;\(\square\)@@
+
+\[
+\begin{aligned}
+o_{K^{\flat}} &:= \varprojlim\big(\cdots \xrightarrow{(\cdot)^q} o_K/\varpi o_K \xrightarrow{(\cdot)^q} \cdots \xrightarrow{(\cdot)^q} o_K/\varpi o_K\big) \\
+&= \{(\ldots,\alpha_i,\ldots,\alpha_1,\alpha_0) \in (o_K/\varpi o_K)^{\mathbb{N}_0} : \alpha_{i+1}^{q} = \alpha_i \text{ for any } i \geq 0\}.
+\end{aligned}
+\]
+
+''Lemma 1.4.6'' //The map//
+
+\[
+\begin{array}{rcl}
+|\ |_{\flat} : o_{K^{\flat}} & \longrightarrow & \mathbb{R}_{\geq 0} \\
+\alpha & \longmapsto & |\alpha^{\sharp}|
+\end{array}
+\]
+
+//is a nonarchimedean absolute value. Furthermore, we have://
+
+(i) \(|o_{K^{\flat}}|_{\flat} = |o_K|\).
+(ii) \(\alpha o_{K^{\flat}} \subseteq \beta o_{K^{\flat}}\)//, for any \(\alpha,\beta \in o_{K^{\flat}}\), if and only if \(|\alpha|_{\flat} \leq |\beta|_{\flat}\).//
+
+''Definition 1.3.2'' A Frobenius power series (for \(\pi\)) is a formal power series \(\phi(X) \in o[[X]]\) such that
+
+\[\phi(X) = \pi X + \text{higher terms} \quad \text{and} \quad \phi(X) \equiv X^q \bmod \pi o[[X]].\]
+
+''Example'' Let \(L = \mathbb{Q}_p\), \(\pi = p\), and \(\phi(X) = (1+X)^p - 1\) so that \(F_{\phi} = \widehat{\mathbb{G}}_m\). Then
+
+\[\mathscr{F}_n = \{\zeta - 1 : \zeta^{p^n} = 1\} \qquad \text{and} \qquad L_n = L(\{\zeta : \zeta^{p^n} = 1\}).\]
+
+On the other hand we define on the set \(W(B)_L := B^{\mathbb{N}_0}\) a new ‘addition’
+
+\[(a_n)_n \boxplus (b_n)_n := (S_n(a_0,\ldots,a_n,b_0,\ldots,b_n))_n\]
+
+''Proposition 1.4.12'' //The completion// \(\hat{L}_{\infty}\) //of the field// \(L_{\infty}\) //in// (1.3.9) //is perfectoid.//
+
+This is another displayed equation $$e=mc^2$$ and a ProperWikiWord, a ~NotAWikiWord and a [[pretty link|Lubin–Tate formal group law]].
+
+perfectoid fields \(\hat{L}_{\infty} \subseteq K \subseteq \mathbb{C}_p\) \(\longrightarrow\) complete and perfect fields \(\hat{L}_{\infty}^{\flat} \subseteq F \subseteq \mathbb{C}_p^{\flat}\)
+
+\[(K, |\ |) \longmapsto (K^{\flat}, |\ |_{\flat})\,. \tag{1.4.18}\]

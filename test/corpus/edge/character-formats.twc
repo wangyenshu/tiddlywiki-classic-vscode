@@ -1,0 +1,2 @@
+Plain ''bold'' //italic// __underline__ ^^sup^^ ~~sub~~ --strike-- and an -- mdash and a trailing --
+Nested ''bold //bold italic// bold'' and //italic ''both'' italic//.

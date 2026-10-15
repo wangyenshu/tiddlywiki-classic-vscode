@@ -1,0 +1,32 @@
+!Simple Images
+{{{
+[img[https://classic.tiddlywiki.com/images/fractalveg.jpg]]
+}}}
+Displays as:
+[img[https://classic.tiddlywiki.com/images/fractalveg.jpg]]
+!Tooltips for Images
+{{{
+[img[tooltip|images/fractalveg.jpg]]
+}}}
+Shows a toolitp if one hovers mouse over the image:
+[img[tooltip|images/fractalveg.jpg]]
+!Image Links
+{{{
+[img[images/fractalveg.jpg][http://www.flickr.com/photos/jermy/10134618/]]
+}}}
+Makes the image clickable (works as a link; check out the tooltip as well):
+[img[images/fractalveg.jpg][http://www.flickr.com/photos/jermy/10134618/]]
+!Floating Images with Text
+{{{
+[<img[images/fractalveg.jpg]]
+}}}
+[<img[images/fractalveg.jpg]] Floats to the left like here
+@@clear:both;display:block; @@
+To start a new line with "cleared" float like this, put the code below in the beginning of it:
+{{{
+@@clear:both;display:block; @@
+}}}
+[>img[images/fractalveg.jpg]]Likewise, you can make image float to the right:
+{{{
+[>img[images/fractalveg.jpg]]
+}}}

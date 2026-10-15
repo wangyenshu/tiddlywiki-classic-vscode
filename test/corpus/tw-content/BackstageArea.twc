@@ -1,0 +1,6 @@
+One of the great strengths of TiddlyWiki is its highly customisable interface. However, while authors need to access the full array of TiddlyWiki features, readers generally benefit from seeing a restricted set of functionality (only things which they can use).
+
+The backstage area helps with this by providing access to authoring functionality that is
+* independent of the interface customisations (even if you blast away the contents of your PageTemplate, you can still access the backstage area)
+* only available when a TiddlyWiki is editable (typically meaning that it's been opened off of a {{{file://}}} URL)
+It appears as a link in the topright corner of the page. Clicking it reveals the backstage toolbar consisting of commands like {{{saveChanges}}} and drop-down tasks like ImportTiddlers, Upgrade, PluginManager and Tweak (which provides access to the new [[options macro]]).

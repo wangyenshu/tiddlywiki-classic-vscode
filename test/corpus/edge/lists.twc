@@ -1,0 +1,9 @@
+* bullet
+** nested bullet with ''bold''
+*# mixed: numbered inside bullet
+# numbered
+## nested numbered
+; term
+: definition with \(\varphi\)
+*not a list after this line?
+plain line

@@ -1,0 +1,6 @@
+@@highlight with ''bold''@@ @@color:red;red text@@ @@background-color:#ff0;bgcolor(#eee):two styles@@ @@display:block;text-align:right;\(\square\)@@
+{{myClass{span class}}} and {{two words{x}}}
+{{blockClass{
+Block class with //italics//
+}}}
+@@color:blue;styled with url http://example.com/@@ and end

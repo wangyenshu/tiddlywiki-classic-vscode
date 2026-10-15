@@ -1,0 +1,7 @@
+[[Plugins]] are just tiddlers containing ~JavaScript code and tagged with <<tag systemConfig>>. ~TiddlyWiki executes any plugin as it loads (unless it is tagged with {{{systemConfigDisable}}}).
+
+Typical ways to install a plugin are:
+* importing (see the "import" panel in backstage of your TW);
+* copying (the title, the text, and adding the {{{systemConfig}}} tag; see also ManuallyInstallIngPlugins);
+* using [[ExtensionsExplorerPlugin|https://github.com/YakovL/TiddlyWiki_ExtensionsExplorerPlugin]] (it also can check for updates when you open your ~TiddlyWiki).
+Usually, these methods require reloading after the plugin is added and the ~TiddlyWiki is saved.

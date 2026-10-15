@@ -1,0 +1,7 @@
+~TiddlyWiki is made up of chunks of information called tiddlers. You're reading a tiddler called "Editing" right now.
+
+When you open an empty ~TiddlyWiki, you see a tiddler called "~GettingStarted" that describes how to set up the Title of your ~TiddlyWiki, the username and and some other bits (see also [[Configuration]]). The username is used to sign your edits (which is meaningful mostly for online ~TiddlyWikis, but also can indicated imported tiddlers). You can always change the username in the right hand sidebar (under [[options »|InterfaceOptions]]).
+
+To switch a tiddler into edit mode, click ''edit'' in its toolbar (in the top right corner) or simply double click the tiddler. When you are finished, click on ''done'', or ''cancel'' to discard your changes.
+
+You can [[link|Link Formatting]] other tiddlers: both [[existing|LikeThis]] and [[unexisting|UnexistingTiddler]]. Linking unexisting tiddlers is a natural way to create them or mark that some gaps should be filled later.

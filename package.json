@@ -1,0 +1,106 @@
+{
+  "name": "tiddlywiki-classic",
+  "displayName": "TiddlyWiki Classic",
+  "description": "Syntax highlighting for TiddlyWiki Classic wiki text, with MathJax formulas highlighted as LaTeX.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "tiddlywiki",
+    "tiddlywiki classic",
+    "wiki",
+    "mathjax",
+    "latex"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "tiddlywiki-classic",
+        "aliases": [
+          "TiddlyWiki Classic",
+          "twc"
+        ],
+        "extensions": [
+          ".twc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tiddlywiki-classic",
+        "scopeName": "text.tiddlywiki.classic",
+        "path": "./syntaxes/tiddlywiki-classic.tmLanguage.json",
+        "embeddedLanguages": {
+          "markup.math.content.tiddlywiki": "latex",
+          "punctuation.definition.math.end.tiddlywiki": "latex",
+          "meta.embedded.block.javascript": "javascript",
+          "meta.embedded.block.css": "css",
+          "meta.embedded.block.html": "html"
+        },
+        "unbalancedBracketScopes": [
+          "punctuation.definition.math.begin.tiddlywiki",
+          "punctuation.definition.math.end.tiddlywiki",
+          "keyword.control.ifnextchar.tex",
+          "punctuation.math.operator.tex"
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "TiddlyWiki Classic",
+      "properties": {
+        "tiddlywikiClassic.outline.labelPattern": {
+          "type": "string",
+          "default": "^''((?:Definition|Theorem|Lemma|Proposition|Corollary|Remark|Example|Exercise|Conjecture|Notation|Claim|Proof)\\b[^']*?)\\.?''",
+          "markdownDescription": "JavaScript regular expression for bold labels such as `''Lemma 1.4.6''` that are listed in the Outline under their heading. The first group is the name shown. Set to an empty string to list headings only."
+        }
+      }
+    },
+    "configurationDefaults": {
+      "[tiddlywiki-classic]": {
+        "editor.wordWrap": "on"
+      },
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "markup.highlight.tiddlywiki",
+            "settings": {
+              "foreground": "#E5484D"
+            }
+          },
+          {
+            "scope": [
+              "markup.other.superscript.tiddlywiki",
+              "markup.other.subscript.tiddlywiki"
+            ],
+            "settings": {
+              "fontStyle": "italic"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "build": "node syntaxes/build-grammar.mjs",
+    "test": "node syntaxes/build-grammar.mjs && node --test test/*.test.mjs",
+    "test:oracle": "node test/run-oracle.mjs",
+    "package": "npm run build && vsce package --allow-missing-repository",
+    "test:e2e": "node test/e2e/vscode-editing.mjs tiddlywiki-classic-0.1.0.vsix && node test/e2e/vscode-render.mjs tiddlywiki-classic-0.1.0.vsix examples/sample.twc test-output \"Default Dark Modern\" \"Default Light Modern\""
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^4.0.0",
+    "jsdom": "^29.1.1",
+    "ovsx": "^1.2.0",
+    "playwright-core": "1.56",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.2"
+  }
+}

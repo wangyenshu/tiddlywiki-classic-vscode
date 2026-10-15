@@ -1,0 +1,6 @@
+Line breaks can be forced explicitly:
+{{{
+Some text with a<br>line break in the middle
+}}}
+Displays as:
+Some text with a<br>line break in the middle

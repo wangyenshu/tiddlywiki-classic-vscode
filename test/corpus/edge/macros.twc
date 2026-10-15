@@ -1,0 +1,2 @@
+Macros: <<today>> <<tiddler [[Some Title]] with:"a" 'b'>> <<slider chkX Tiddler "label »" "tool
+tip on the next line">> << not a macro >>

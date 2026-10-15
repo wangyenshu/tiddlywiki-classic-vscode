@@ -1,0 +1,113 @@
+# Publishes the extension to Open VSX (https://open-vsx.org) when a version
+# tag such as v0.1.1 is pushed, and attaches the .vsix to a GitHub release.
+#
+# Uses Open VSX trusted publishing: the publish job exchanges a short-lived
+# GitHub OIDC token for a publishing token, so no access token is stored in
+# GitHub. One-time setup is described under "Publishing" in README.md.
+#
+# Release: bump "version" in package.json, commit, then
+#   git tag v0.1.1 && git push origin v0.1.1
+#
+# Running it from the Actions tab only builds and tests.
+
+name: Publish to Open VSX
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.check.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          # No dependency cache: this job builds the package that gets published.
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check package.json
+        id: check
+        run: |
+          publisher=$(node -p "require('./package.json').publisher")
+          version=$(node -p "require('./package.json').version")
+          if [ "$GITHUB_REF_TYPE" = "tag" ]; then
+            if [ "$publisher" = "local" ]; then
+              echo "::error file=package.json::Set \"publisher\" in package.json to your Open VSX namespace."
+              exit 1
+            fi
+            if [ "$GITHUB_REF_NAME" != "v$version" ]; then
+              echo "::error file=package.json::Tag $GITHUB_REF_NAME does not match version $version in package.json."
+              exit 1
+            fi
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Test
+        run: npm test
+
+      - name: Package
+        run: |
+          mkdir -p dist
+          npm run package -- --out "dist/tiddlywiki-classic-${{ steps.check.outputs.version }}.vsix"
+
+      - name: Keep the .vsix as a build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: vsix
+          path: dist/*.vsix
+          if-no-files-found: error
+
+  publish:
+    needs: build
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    # Must match the environment in the trusted publisher registration on Open VSX.
+    environment: open-vsx
+    permissions:
+      id-token: write # trusted publishing
+      contents: write # GitHub release
+    env:
+      VSIX: dist/tiddlywiki-classic-${{ needs.build.outputs.version }}.vsix
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: vsix
+          path: dist
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Publish to Open VSX
+        # Keep this version in step with "ovsx" in package.json.
+        run: npx --yes ovsx@1.2.0 publish "$VSIX" --trusted-publishing
+
+      - name: Attach the .vsix to a GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" "$VSIX" --repo "$GITHUB_REPOSITORY" --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" "$VSIX" --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --generate-notes
+          fi

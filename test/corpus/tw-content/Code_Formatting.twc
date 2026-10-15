@@ -1,0 +1,10 @@
+Text such as computer code that should be displayed without wiki processing and preserving line breaks:
+&#123;&#123;&#123;
+Some plain text including WikiLinks
+&#125;&#125;&#125;
+Displays as:
+{{{
+Some plain text including WikiLinks
+}}}
+!See Also
+[[Suppressing Formatting]]

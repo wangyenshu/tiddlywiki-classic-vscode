@@ -1,0 +1,7 @@
+Entities: &nbsp; &mdash; &#8212; &lt;br&gt; and <br> and <br/> and <br />
+Raw: """no ''format'' here""" and <nowiki>//no// [[link]]</nowiki>.
+Inline code: {{{code with ''quotes'' and \(math\)}}} and {{{multi
+line code}}} done.
+Comments: /%hidden ''text''%/ shown /%multi
+line
+comment%/ shown.

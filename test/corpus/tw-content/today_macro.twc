@@ -1,0 +1,14 @@
+The date macro will display the current date and time:
+{{{
+<<today>>
+}}}
+Displays as:
+<<today>>
+
+This macro accepts one parameter - a date format. Such as:
+{{{
+<<today DD/MM/YYYY>>
+}}}
+Displays as:
+<<today DD/MM/YYYY>>
+Read more about [[Date Formats]]

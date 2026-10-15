@@ -1,0 +1,5 @@
+Safari can SaveChanges using the TiddlySaver Java applet.
+
+There are still some issues with Safari:
+* Permalinks with Unicode characters in them (like [[this one|http://avm.free.fr/tidlipo.html#AdaptationFran%C3%A7aise]]) don't work properly
+* When using Safari 6.0 on OSX "Mountain Lion", TiddlySaver.jar does not get loaded properly.  To work around this, go to "preferences / advanced" and check "Show Develop menu in menu bar", then mark "Disable local file restrictions" 

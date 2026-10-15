@@ -1,0 +1,6 @@
+Each opener below has no closer anywhere after it. TiddlyWiki then shows the
+opener as plain text; the grammar cannot look ahead to later lines, so it colors
+the rest of the tiddler until a closer is typed. Each one hides the next, so
+only the first is visible in a single file.
+Unclosed math \(x + y and the rest of the line
+is plain because there is no closer.

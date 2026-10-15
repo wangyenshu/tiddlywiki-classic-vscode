@@ -1,0 +1,14 @@
+In this tiddler you put the text you wish to be displayed as the title of the page in the browser.
+By default it is set to:
+{{{
+<<tiddler SiteTitle>> - <<tiddler SiteSubtitle>>
+}}}
+which could display something like:
+{{{
+shadowtiddlers - a tiddlywiki
+}}}
+
+You can change this at any time. For example:
+{{{
+Shadow Tiddlers Documentation | TiddlyWiki.com
+}}}

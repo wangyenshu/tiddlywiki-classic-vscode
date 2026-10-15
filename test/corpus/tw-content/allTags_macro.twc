@@ -1,0 +1,8 @@
+At it's most basic this macro lists all the tags used in you tiddlywiki as dropdown lists of all the tiddlers which have that tag
+For example
+{{{
+<<allTags>>
+}}}
+
+Displays as:
+<<allTags>>

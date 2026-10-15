@@ -1,0 +1,10 @@
+Macro with arrows <<x a>b "c>>d">> and <<>> and <<
+Strike at end of line a--b-- c -- d--
+3WikiWord and x.WikiWord and (WikiWord) and http://x.org. and <http://x.org/a>
+|@@color:red;red cell@@|{{cls{class cell}}}|/%hidden%/ shown|
+|''bold cell|still bold?|
+''
+Inline code {{{a}}}} extra brace and {{{}}} empty
+Nested {{outer{a {{inner{b}}} c}}} d
+Heading-like !not at start and > not a quote and * not a list
+!!!!!!!! eight

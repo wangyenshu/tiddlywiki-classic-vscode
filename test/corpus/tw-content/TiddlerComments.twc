@@ -1,0 +1,3 @@
+To hide text within a tiddler so that it is not displayed you can wrap it in {{{/%}}} and {{{%/}}}. It can be a useful trick for hiding drafts or annotating complex markup. Edit this tiddler to see an example.
+/%This text is not displayed
+until you try to edit %/

@@ -1,0 +1,3 @@
+To use TiddlyWiki with recent versions of Mozilla Firefox you'll need to install the TiddlyFox extension. It enables TiddlyWiki documents loaded from a {{{file:///}}} URI to save changes to themselves.
+
+<<tiddler TiddlyFox>>

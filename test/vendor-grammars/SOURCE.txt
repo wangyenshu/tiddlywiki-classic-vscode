@@ -1,0 +1,2 @@
+291641531307c814dcc5ddf43027396ef0a59a4d Wed Oct 14 00:29:52 2026 +0000
+Copied from microsoft/vscode extensions/{latex,javascript,css,html}/syntaxes (MIT). Used only by the tests, to stand in for the grammars that ship with VS Code.

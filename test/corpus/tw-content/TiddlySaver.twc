@@ -1,0 +1,6 @@
+The ~TiddlySaver Java applet allowed ~TiddlyWiki to save changes locally (from a file:// URL) in most of the browsers. As Java applets support deminished and maintaining the applet and its signing got more and more difficult, it was decided to put it aside (see [[Setting up saving]] for the recommended savers).
+
+!!!Historical details
+~TiddlySaver.jar was signed by [[UnaMesa Association|UnaMesa]]. The ~UnaMesa Association certificate was signed by the ''Thawte Code Signing CA'' intermediate certificate which was chained to the ''Thawte Premium Server CA'' root certificate. One needed to trust this certificate Chain to be able to use the applet.
+
+Thanks to Andrew Gregory for the original TiddlySaver code, and ~BidiX for arranging all the certificate magic.

@@ -1,0 +1,4 @@
+This tiddler contains the command to display the plugin manager: 
+{{{
+<<plugins>>
+}}}

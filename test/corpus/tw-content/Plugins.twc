@@ -1,0 +1,10 @@
+~TiddlyWiki can be extended by [[installing plugins|InstallingPlugins]] (and [[other extensions|Customisation]]) that implement a wide variety of features (like adding [[better search|Search]], [[formulas support|Mathematics]], additional [[Macros]], etc).
+
+There are several catalogues of plugins and other extensions, for instance:
+* [[TiddlyVault|https://tiddlyvault.tiddlyspot.com/]] by Dave Gifford,
+* [[TiddlyTools|https://tiddlytools.com/Classic/]] (contains mostly extensions by Eric Shulman, but there are lots of them),
+* servers of some other authors are tagged [[systemServer]] here (but it's not a comprehensive list),
+* [[Customize Space Archive|https://yakovlitvin.pro/TW/TS_backups/customize.tiddlyspace.com%20(24.02.2016).html]] (a comprehensive catalogue of its time).
+As many of them were not maintained for a while, some links got broken, so sometimes you'll need to use [[Web Archive|https://archive.org/web]] to get an extension.
+
+For information on writing plugins, see DeveloperDocumentation.

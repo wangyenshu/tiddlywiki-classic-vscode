@@ -1,0 +1,19 @@
+To check if a new ~TiddlyWiki version is available or to upgrade to the new version, one can use the "upgrade" wizard in the backstage (or from the {{{<<upgrade>>}}} macro).
+
+⚠️ The upgrading mechanism only works with some savers; with others, upgrading //from// a TW below 2.10.0 may result in an empty TW. To avoid problems and upgrade easily, it is recommended to
+# always create a backup before upgrading, and
+# install the [[SimplifiedUpgradingPlugin|https://github.com/YakovL/TiddlyWiki_SimplifiedUpgradingPlugin/blob/master/SimplifiedUpgradingPlugin.js]] (and then use the upgrade wizard as usual) – it helps at least with Timimi, ~MainTiddlyServer, and Tiddloid.
+If ~SimplifiedUpgradingPlugin doesn't work for you, please
+* provide feedback (either on Github or in the [[community discussions|DiscussionForums]]): it will help make sure it works in the future and, ultimately, will be used to make ~TiddlyWiki upgrade correctly without any plugin;
+* use the import fallback described below.
+
+!!!The import fallback
+This method of upgrading is known  to be 100% reliable and works even with old ~TiddlyWikis (below 2.4.0). In two words,
+* download the new TW version,
+* open it, open backstage, and click "import",
+* import your non-upgraded TW and save,
+* use this TW as an upgraded one (and keep your old one as a backup).
+You may also want to check out [[this older, more detailed instruction|HowToUpgradeOlderTiddlyWikis]].
+
+!!!Old plugins
+While new ~TiddlyWiki versions are created with backwards compatibility in mind, some old plugins may have become incompatible with them (or with certain savers). If you encounter any problems, you can get help from the [[community|DiscussionForums]] or create an issue [[on Github|https://github.com/TiddlyWiki/tiddlywiki/issues]].

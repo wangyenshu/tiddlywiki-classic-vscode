@@ -1,0 +1,3 @@
+Test-only copies of TiddlyWiki Classic source files (BSD license, see copyright.txt).
+From https://github.com/TiddlyWiki/tiddlywiki at 2f56290793a79555b22c20a7f3ccd5a49429f0a6.
+TextPrimitives.js is lines 163-204 of js/Config.js.

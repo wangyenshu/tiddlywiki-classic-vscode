@@ -1,0 +1,6 @@
+<html><a class="downloadButton" title="Download TiddlyWiki"
+  href="empty.html" download="empty.html" onclick="story.displayTiddler(null, 'Setting up saving')"
+  tabindex="0"
+>
+    download
+</a></html>

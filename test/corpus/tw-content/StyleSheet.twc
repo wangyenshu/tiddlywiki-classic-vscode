@@ -1,0 +1,58 @@
+/***
+This fixes a problem with the tabs slider
+***/
+/*{{{*/
+#sidebarTabs .button {
+	margin: 0em 0.2em;
+	padding: 0.2em 0.3em;
+	display: block;
+}
+/*}}}*/
+/***
+This is a sample style definition to demonstrate [[CustomCssClass|CSS Formatting]] formatting
+***/
+/*{{{*/
+.wrappingClass {
+	color: #666; background: #bbb;
+}
+/*}}}*/
+/***
+Prettyify
+***/
+/*{{{*/
+body {
+	font-size: 0.92em;
+	margin-bottom: 4em;
+}
+
+.tiddler .viewer {
+	font-size: 1.1em;
+}
+
+.downloadButton {
+	display: inline-block;
+	padding: 0.5em 1em;
+	border-radius: .5em;
+	border: none;
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: [[ColorPalette::Background]];
+	background-color: [[ColorPalette::QuaternaryMid]];
+}
+.downloadButton:hover {
+	background-color: [[ColorPalette::QuaternaryDark]];
+}
+.downloadButton:active {
+	transform: scale(.95);
+}
+.downloadButton:focus {
+	outline: none;
+	box-shadow: 0 0 0 1px [[ColorPalette::QuaternaryDark]];
+}
+
+.icon img {
+	max-height: 24px;
+}
+
+/*}}}*/

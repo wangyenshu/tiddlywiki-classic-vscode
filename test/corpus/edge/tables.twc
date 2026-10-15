@@ -1,0 +1,12 @@
+|Caption with ''bold''|c
+|myTableClass|k
+|!Header 1|!Header 2|!Header 3|h
+| right| left | center |
+|>|colspan with ''bold''|plain|
+|bgcolor(#fdd): styled cell|color:red; css cell|~|
+|http://example.com/x|b|c|
+|http://example.com/x/|b|c|
+|cell with [[link|Target]] and \(a|b\)|second|third|
+|Footer|f|row|f
+|not a table row
+|also not| a table row because of trailing space| 

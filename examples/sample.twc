@@ -1,0 +1,45 @@
+!! Lubin–Tate formal group law
+''Definition 1.3.2'' A Frobenius power series (for \(\pi\)) is a formal power series \(\phi(X) \in o[[X]]\) such that
+
+\[\phi(X) = \pi X + \text{higher terms} \quad \text{and} \quad \phi(X) \equiv X^q \bmod \pi o[[X]].\]
+
+''Proposition 1.3.12'' //For any \(n \geq 1\) the extension \(L_n/L\) is finite Galois, and//
+
+\[\chi_{L,n} : \mathrm{Gal}(L_n/L) \overset{\cong}{\longrightarrow} (o/\pi^n o)^{\times}\]
+
+//is an isomorphism of groups. Furthermore, we have://
+
+(i) //\(L_n/L\) is totally ramified of degree \((q-1)q^{n-1}\).//
+(ii) //If \(z \in \mathscr{F}_n\) is any generator then \(L_n = L(z)\).//
+
+!!! Tilting
+''Lemma 1.4.6'' //The map//
+
+\[
+\begin{array}{rcl}
+|\ |_{\flat} : o_{K^{\flat}} & \longrightarrow & \mathbb{R}_{\geq 0} \\
+\alpha & \longmapsto & |\alpha^{\sharp}|
+\end{array}
+\]
+
+//is a nonarchimedean absolute value.// @@Check the proof again.@@ See also [[Perfectoid fields]], the LubinTate tower and $$e=mc^2$$.
+
+|!Symbol |!Meaning |h
+|\(o_K\) |ring of integers of \(K\) |
+|\(\mathfrak{m}_K\) |maximal ideal |
+|bgcolor(#ffc): \(K^{\flat}\) |the tilt, see http://example.com/tilting |
+
+* bullet with ''bold'', __underline__, --strike--, super^^script^^ and sub~~script~~
+# numbered with <<tiddler [[Some Tiddler]] with:"argument">>
+> quoted line
+/%hidden comment%/ {{{inline code}}} [img[tooltip|images/diagram.png]]
+
+{{{
+plain code block, no ''formatting''
+}}}
+//{{{
+config.extensions.MathJax = { mathJaxScript: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js" };
+//}}}
+/*{{{*/
+.viewer span.marked { color: #cc0000 !important; background: transparent; }
+/*}}}*/
